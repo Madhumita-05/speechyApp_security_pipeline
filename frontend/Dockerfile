@@ -1,5 +1,6 @@
 FROM node:20-alpine AS build
 
+RUN apk update && apk upgrade --no-cache
 WORKDIR /app
 
 COPY package.json ./
